@@ -1,0 +1,34 @@
+.Body-container {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20px;
+    display: flex;
+}
+
+
+
+.Body-left {
+    padding: 20px;
+    width: 30%;
+}
+
+.Body-right {
+    padding: 20px;
+    width: 70%;
+    height: 1000px;
+}
+
+@media screen and (max-width: 768px) {
+   
+    .Body-left {
+       display: none;
+    }
+    .Body-right {
+        width: 100%;
+        padding: 0px;
+    }
+    .Body-container {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}

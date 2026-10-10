@@ -1,0 +1,76 @@
+/* Uklanjanje standardnog Bootstrap plavog okvira i senke pri fokusu */
+.accordion-button:focus {
+    border-color: #babfc4; /* Siva boja ivice */
+    box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.25); /* Blagi sivi sjaj umesto plavog */
+}
+
+/* Boja kada je akordeon otvoren/aktivan */
+.accordion-button:not(.collapsed) {
+    background-color: #b2b4b6; /* Pozadina kada je otvoren */
+    color: #212529;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+/* --- STILOVI ZA ČISTE LINK STAVKE --- */
+
+/* Potpuno uklanjanje strelice i njenih transformacija za link stavku */
+.accordion-button.accordion-link-item::after {
+    display: none !important;
+}
+
+.accordion-button.accordion-link-item:not(.collapsed)::after {
+    transform: none !important;
+}
+
+/* Prisilno vraćanje standardne zatvorene pozadine i izgleda za link stavku */
+.accordion-button.accordion-link-item {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+/* Sprečavanje menjanja boje pozadine na hover/focus za link */
+.accordion-button.accordion-link-item:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+
+/* --- STILOVI ZA RAZDVOJENO ZAGLAVLJE (Stavka 2) --- */
+
+/* Omotač koji drži link sa leve i dugme sa desne strane */
+.custom-split-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0;
+}
+
+/* Levi tekst koji radi kao običan link */
+.accordion-title-link {
+    padding: 1rem 1.25rem;
+    color: #212529;
+    text-decoration: none;
+    font-weight: 500;
+    display:inline-block;
+    font-size: 16px; 
+}
+
+.accordion-title-link:hover {
+    color: #898b8d; /* Možeš promeniti boju teksta na hover po želji */
+}
+
+/* Desno dugme koje služi isključivo za otvaranje akordeona sa strelicom */
+.custom-collapse-btn {
+    width: auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 1.25rem !important;
+}
+
+.custom-collapse-btn:focus {
+    box-shadow: none !important;
+}

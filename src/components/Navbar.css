@@ -1,0 +1,60 @@
+.Navbar {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 40px;
+    padding-top: 30px;
+
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.navbar {
+    padding-top: 0px;
+}
+
+.nav-link {
+    color: #dbd8d8;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand img{
+    height:60px;
+    width:auto;
+}
+
+.cart-SVG {
+    padding-left: 20px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler {
+    border: none; 
+}
+
+/* Uklanja okvir i senku sa dugmeta korpe na klik, fokus i hover */
+.cart-SVG .btn,
+.cart-SVG .btn:focus,
+.cart-SVG .btn:active,
+.cart-SVG .btn-check:checked + .btn {
+    outline: none !important;
+    border: none !important;
+}
+
+
+
+
+
+/* Stilovi za manje ekrane (telefone i manje tablete) */
+@media screen and (max-width: 768px) {
+    .Navbar {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}

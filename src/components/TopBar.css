@@ -1,0 +1,58 @@
+.TopBar-container {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #dbd8d8;
+    font-weight: 400;
+    background-color: rgb(71, 68, 68);
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    justify-content: space-between; /* Razdvaja levo i desno na krajeve */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* OBAVEZNO: Daje desnom divu da se proširi do kraja */
+.TopBar-right {
+    flex-grow: 1; 
+}
+
+.TopBar-left p {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+}
+
+.TopBar-right ul {
+    list-style: none;  
+    margin: 0;
+    padding: 0;
+    display: flex;     
+    justify-content: flex-end; /* Sada će ovo savršeno gurnuti linkove skroz desno */
+    gap: 20px;         
+}
+
+.TopBar-right a {
+    margin: 10px;
+}
+
+.TopBar-right a,
+.TopBar-left a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.TopBar-right a:hover,
+.TopBar-left a:hover {
+    font-weight:bold;
+}
+@media screen and (max-width: 768px) {
+    .TopBar-container {
+       display: none;
+    }
+
+    .TopBar-right ul {
+        gap: 10px; 
+    }
+}

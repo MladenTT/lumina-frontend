@@ -1,0 +1,35 @@
+
+.btn-subtle {
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Primeni senku na ceo kontejner kapcije da se automatski nasledi na sve unutra */
+.carousel-caption {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.95);
+}
+
+.carousel-caption h4,
+.carousel-caption h1,
+.carousel-caption p {
+    text-shadow: 
+        0 0 2px rgba(0, 0, 0, 1),
+        0 0 5px rgba(0, 0, 0, 1),
+        0 0 10px rgba(0, 0, 0, 1),
+        0 0 20px rgba(0, 0, 0, 0.95),
+        3px 3px 25px rgba(0, 0, 0, 0.95);
+}
+.theme-inverse:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+}
+
+.theme-inverse {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
