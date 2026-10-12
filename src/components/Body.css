@@ -15,7 +15,16 @@
 .Body-right {
     padding: 20px;
     width: 70%;
-    height: 1000px;
+    height: auto;
+}
+
+.Body-right-title {
+    text-align: center;
+    height: 40px;
+    padding-left: 40px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;;
 }
 
 @media screen and (max-width: 768px) {

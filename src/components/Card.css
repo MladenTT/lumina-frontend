@@ -1,0 +1,44 @@
+.card-container {
+    min-height: 250px; 
+    height: auto;    
+    text-align: center;
+}
+
+/* 1. Novi kontejner koji drži sliku i seče višak */
+.card-img-wrapper {
+    width: 100%;
+    height: 200px;     /* Fiksiraj visinu slike po želji */
+    overflow: hidden;  /* KLJUČNO: Sprečava da uvećana slika izađe van okvira */
+    border-radius: 10px;
+}
+
+/* 2. Podešavanja za samu sliku i tranziciju */
+.card-container img {
+    height: 100%;
+    width: 100%; 
+    object-fit: cover; /* Sprečava izobličenje slike */
+    transition: transform 0.4s ease-in-out; /* Glatka animacija pri zumiranju */
+}
+
+/* 3. Efekat zumiranja kada se pređe mišem preko kontejnera slike */
+.card-img-wrapper:hover img {
+    transform: scale(1.1); /* Uvećava sliku za 10% */
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.btn1 {
+    background-color: #C59B57; 
+    font-weight: 600;
+}
+
+.btn1:hover {
+    background-color: #c99035; 
+}
+
+.btn1:active {
+    background-color: #c99035 !important; 
+}

@@ -1,0 +1,15 @@
+.Footer-container {
+    color:black;
+    background: linear-gradient(to bottom, #C59B57 0%, rgba(197, 155, 87, 0.3) 60%, rgba(255, 255, 255, 0.9) 100%);
+    width: 100%;
+}
+
+.Footer-container a {
+    color: #4a4a4a; /* Malo svetlija crna / tamno siva */
+    font-size: 15px; /* Smanjen font (podesi po želji npr. na 12px ili 13px) */
+    transition: color 0.3s ease; /* Glatki prelaz pri hover-u */
+}
+
+.Footer-container a:hover {
+    color: #8c8c8c; /* Svetlija siva boja na hover */
+}
