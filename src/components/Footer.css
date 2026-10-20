@@ -68,9 +68,31 @@ details[open] .accordion-icon {
     justify-content: center; /* Centriranje po sredini (ili stavi flex-start / space-between) */
 }
 
-/* Fiksiramo dimenzije samih slika */
+/* Fiksiranje dimenzije slika */
 .payment-methods-img img {
-    width: 80px;   /* Ovde upiši željenu širinu */
-    height: 60px;  /* Ovde upiši željenu visinu */
-    object-fit: contain; /* Čuva srazmeru slike da se ne iskrivi */
+    width: 80px;   
+    height: 60px; 
+    object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+    .payment-methods-img {
+        flex-wrap: wrap;     /* Dozvoljava prelazak u novi red na telefonima */
+        gap: 10px;           /* Razmak između ikonica */
+        max-width: 260px;    /* Drži blok skupljenim da bi tačno 3 stale u prvi red */
+        margin: 0 auto;      /* Centriranje celog bloka */
+    }
+
+    /* Svaki omotač slike zauzima oko 33% širine (3 komada u redu) */
+    .payment-methods-img div {
+        flex: 0 0 calc(33.333% - 10px); 
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Smanjene dimenzije slika za telefon */
+    .payment-methods-img img {
+        width: 55px;  
+        height: 40px; 
+    }
 }
