@@ -1,4 +1,4 @@
-import './Shortcuts.css'
+import './Shortcuts.css';
 
 const Shortcuts = () => {
     return (
@@ -6,13 +6,13 @@ const Shortcuts = () => {
             <div className="accordion accordion-flush" id="accordionFlushExample">
                 
                 {/* Stavka 1 - Naslov */}
-                <div className="accordion-item" style={{ textAlign: 'center' }}>
-                    <h4 className="accordion-header" style={{ padding: '0.75rem 1.25rem', margin: 0 }}>
+                <div className="accordion-item">
+                    <h4 className="accordion-header accordion-category-title">
                         Proizvodi
                     </h4>
                 </div>
 
-                {/* Stavka 2 - Razdvojeno: tekst je link, a desno je strelica za akordeon */}
+                {/* Stavka 2 - Razdvojeno */}
                 <div className="accordion-item">
                     <h2 className="accordion-header custom-split-header">
                         <a href="/tvoja-putanja-2" className="accordion-title-link">
@@ -26,7 +26,7 @@ const Shortcuts = () => {
                     </div>
                 </div>
 
-                {/* Stavka 3 - Razdvojeno (kao i 2) */}
+                {/* Stavka 3 - Razdvojeno */}
                 <div className="accordion-item">
                     <h2 className="accordion-header custom-split-header">
                         <a href="/tvoja-putanja-3" className="accordion-title-link">
@@ -40,10 +40,10 @@ const Shortcuts = () => {
                     </div>
                 </div>
 
-                {/* Stavka 4 - Čist link (bez otvaranja) */}
+                {/* Stavka 4 - Čist link (sada sa istom klasom da bude potpuno isti) */}
                 <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <a href="/tvoja-putanja-4" className="accordion-button accordion-link-item">
+                    <h2 className="accordion-header custom-split-header">
+                        <a href="/tvoja-putanja-4" className="accordion-title-link w-100">
                             Accordion Item #4
                         </a>
                     </h2>
@@ -51,8 +51,8 @@ const Shortcuts = () => {
 
                 {/* Stavka 5 - Čist link */}
                 <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <a href="/tvoja-putanja-5" className="accordion-button accordion-link-item">
+                    <h2 className="accordion-header custom-split-header">
+                        <a href="/tvoja-putanja-5" className="accordion-title-link w-100">
                             Accordion Item #5
                         </a>
                     </h2>
@@ -60,14 +60,14 @@ const Shortcuts = () => {
 
                 {/* Stavka 6 - Čist link */}
                 <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <a href="/tvoja-putanja-6" className="accordion-button accordion-link-item">
+                    <h2 className="accordion-header custom-split-header">
+                        <a href="/tvoja-putanja-6" className="accordion-title-link w-100">
                             Accordion Item #6
                         </a>
                     </h2>
                 </div>
 
-                {/* Stavka 7 - Razdvojeno (kao i 2) */}
+                {/* Stavka 7 - Razdvojeno */}
                 <div className="accordion-item">
                     <h2 className="accordion-header custom-split-header">
                         <a href="/tvoja-putanja-7" className="accordion-title-link">
@@ -83,8 +83,8 @@ const Shortcuts = () => {
 
                 {/* Stavka 8 - Čist link */}
                 <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <a href="/tvoja-putanja-8" className="accordion-button accordion-link-item">
+                    <h2 className="accordion-header custom-split-header">
+                        <a href="/tvoja-putanja-8" className="accordion-title-link w-100">
                             Accordion Item #8
                         </a>
                     </h2>
@@ -92,8 +92,8 @@ const Shortcuts = () => {
 
                 {/* Stavka 9 - Čist link */}
                 <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <a href="/tvoja-putanja-9" className="accordion-button accordion-link-item">
+                    <h2 className="accordion-header custom-split-header">
+                        <a href="/tvoja-putanja-9" className="accordion-title-link w-100">
                             Accordion Item #9
                         </a>
                     </h2>
@@ -101,8 +101,8 @@ const Shortcuts = () => {
 
                 {/* Stavka 10 - Čist link */}
                 <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <a href="/tvoja-putanja-10" className="accordion-button accordion-link-item">
+                    <h2 className="accordion-header custom-split-header">
+                        <a href="/tvoja-putanja-10" className="accordion-title-link w-100">
                             Accordion Item #10
                         </a>
                     </h2>

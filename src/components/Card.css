@@ -1,5 +1,5 @@
 .card-container {
-    min-height: 250px; 
+    min-height: 200px; 
     height: auto;    
     text-align: center;
 }
@@ -7,7 +7,7 @@
 /* 1. Novi kontejner koji drži sliku i seče višak */
 .card-img-wrapper {
     width: 100%;
-    height: 200px;     /* Fiksiraj visinu slike po želji */
+    height: 150px;     /* Fiksiraj visinu slike po želji */
     overflow: hidden;  /* KLJUČNO: Sprečava da uvećana slika izađe van okvira */
     border-radius: 10px;
 }
@@ -41,4 +41,22 @@ p {
 
 .btn1:active {
     background-color: #c99035 !important; 
+}
+
+.desktop-btn {
+    display: inline-block; 
+}
+
+.mobile-btn {
+    display: none; 
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-btn {
+        display: none; 
+    }
+    .mobile-btn {
+        display: inline-block; 
+        width: 100%;
+    }
 }

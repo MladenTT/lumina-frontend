@@ -1,15 +1,76 @@
 .Footer-container {
-    color:black;
+    color: black;
     background: linear-gradient(to bottom, #C59B57 0%, rgba(197, 155, 87, 0.3) 60%, rgba(255, 255, 255, 0.9) 100%);
     width: 100%;
+    overflow-x: hidden; /* Sprečava bilo kakvo pomeranje sadržaja van ekrana u stranu */
 }
 
 .Footer-container a {
-    color: #4a4a4a; /* Malo svetlija crna / tamno siva */
-    font-size: 15px; /* Smanjen font (podesi po želji npr. na 12px ili 13px) */
-    transition: color 0.3s ease; /* Glatki prelaz pri hover-u */
+    color: #4a4a4a; 
+    font-size: 15px; 
+    transition: color 0.3s ease; 
 }
 
 .Footer-container a:hover {
-    color: #8c8c8c; /* Svetlija siva boja na hover */
+    color: #8c8c8c; 
+}
+
+/* Stilovi za mobilni akordion unutar ekrana */
+.accordion {
+    background: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px; /* Blagi unutrašnji razmak da ne lepi uz samu ivicu ekrana */
+}
+
+.accordion-item {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.accordion-header {
+    padding: 14px 0;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.accordion-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Sprečava da ikonica menja oblik ako je naziv dugačak */
+}
+
+.accordion-body {
+    padding: 10px 0 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Rotacija strelice kada se akordion otvori (opciono, za lepši efekat) */
+details[open] .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Glavni kontejner stavlja sve unutrašnje div-ove u jedan red i centrira ih */
+.payment-methods-img {
+    display: flex;
+    flex-wrap: nowrap; /* Sprečava prelazak u novi red */
+    gap: 30px;         /* Razmak između ikonica (podesi po želji) */
+    align-items: center;
+    justify-content: center; /* Centriranje po sredini (ili stavi flex-start / space-between) */
+}
+
+/* Fiksiramo dimenzije samih slika */
+.payment-methods-img img {
+    width: 80px;   /* Ovde upiši željenu širinu */
+    height: 60px;  /* Ovde upiši željenu visinu */
+    object-fit: contain; /* Čuva srazmeru slike da se ne iskrivi */
 }
