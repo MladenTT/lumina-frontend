@@ -45,6 +45,8 @@
 
   p {
     display: none; /* Sakrivamo paragraf na mobilnim uređajima */
+  }
+
   h4 {
     font-size: 1rem; /* Smanjujemo veličinu fonta za mobilne uređaje */
   }
