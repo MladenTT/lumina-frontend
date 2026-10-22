@@ -1,0 +1,228 @@
+.LandingPage-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.titleLandingPage p {
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #696666;
+}
+
+
+
+.Body-right {
+    width: 100%;
+}
+
+.product-container {
+    display: flex;
+}
+
+.product-container-left {
+    max-width: 540px;
+    width: 100%;
+    border-radius: 10px;
+    filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.3));
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Razmak između glavne slike i malih kontejnera ispod */
+    padding: 15px; /* Unutrašnji razmak da elementi ne lepe za ivice */
+}
+
+.product-container-right {
+    max-width: 420px;
+    width: 100%;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+
+/* Unutrašnji kontejner za glavnu sliku */
+.mainImgContainer {
+    width: 100%;
+    height: clamp(320px, 32vw, 430px);
+}
+
+.mainImgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Kontejner za tri mala kvadrata ispod */
+.smallContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.smallImgContainer {
+    height: clamp(90px, 9vw, 120px);
+    flex: 1; 
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.smallImgContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 70%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.smallImgContainer:hover img {
+    opacity: 100%;
+    transform: scale(1.1);
+}
+
+/* Osnovni stil za svako dugme sa klasom btn-outline */
+.btn-outline {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    height: 48px;                 /* Fiksna visina */
+    padding: 0 20px;              /* Unutrašnji razmak levo/desno umesto gore/dole */
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;                /* Omogućava centriranje sadržaja po visini */
+    align-items: center;          /* Centrira tekst i ikonicu vertikalno */
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+
+/* Efekat kada pređeš mišem preko njega */
+.theme-success:hover {
+    background-color: #34ce57;
+    color: #ffffff;
+}
+
+.natpis {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #918c8c;
+    font-size: 20px;
+}
+
+.cena-vrednost {
+    color: red;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.dugme-kupovina-container button {
+    margin-right: 5px;
+}
+
+.dugme-kupovina-container button span {
+    margin-right: 15px;
+}
+
+
+
+/* Stilovi za grupu sa količinom (+, input, -) */
+.quantity-group {
+    display: flex;
+    align-items: center;
+    max-width: 160px; /* Podesi širinu po želji */
+    margin-top: 5px;
+}
+
+/* Stil za dugmiće + i - (kremkasta boja, poravnati sa inputom) */
+.btn-qty {
+    background-color: #fdfbf7; /* Kremkasta boja pozadine */
+    color: #333333;
+    border: 1px solid #dcd6cd;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover efekat za + i - dugmiće da malo potamne */
+.btn-qty:hover {
+    background-color: #f4efe6;
+}
+
+/* Zaobljavanje ivica spoljnih dugmića da liče na grupno dugme */
+.btn-qty:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-right: none; /* Spaja ih sa inputom vizuelno */
+}
+
+.btn-qty:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-left: none;
+}
+
+/* Srednje input polje za unos brojeva (visina ista kao i dugmad) */
+.qty-input {
+    background-color: #ffffff;
+    border: 1px solid #dcd6cd;
+    height: 40px;
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    outline: none;
+}
+
+/* Uklanjanje strelica (spinnera) sa brojeva u nekim browserima zbog lepšeg izgleda (opciono) */
+.qty-input::-webkit-inner-spin-button,
+.qty-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.dugme-kupovina-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-wishlist {
+    background-color: transparent;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+    height: 48px;                 /* Ista visina kao dugme za kupovinu (48px) */
+    width: 50px;                  /* Širina ista kao visina da bude kvadratno */
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+/* Efekat na hover: puna crvena pozadina i belo srce */
+.btn-wishlist:hover {
+    background-color: #dc3545;         /* Pozadina postaja skroz crvena */
+    color: #ffffff;                    /* Srce unutra postaje belo */
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .product-container {
+    display:flex;
+    flex-direction: column;
+}
+  
+}

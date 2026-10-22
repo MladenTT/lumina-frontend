@@ -1,7 +1,8 @@
 import './Body.css'
 import Carousel from './Carousel';
 import Shortcuts from './Shortcuts';
-import Card from './Card';
+import CardList from './CardList';
+
 
 const Body = () => {
     return (
@@ -10,45 +11,8 @@ const Body = () => {
                 <Shortcuts />
             </div>
             <div className="Body-right">
-                 <Carousel />
-                 <div className="Body-right-title">
-                    <h3>Nasa ponuda</h3>
-                </div>
-                <div className="row row-cols-3 row-cols-lg-4 g-2 p-3">
-                    <div className="col">
-                        <Card />
-                    </div>
-                    <div className="col">
-                        <Card />
-                    </div>
-                    <div className="col">
-                        <Card />
-                    </div>
-                    <div className="col">
-                        <Card />
-                    </div>
-                    <div className="col">
-                        <Card />
-                    </div>
-                    <div className="col">
-                        <Card />
-                    </div>
-                    <div className="col">
-                        <Card />
-                    </div>
-                    <div className="col">
-                        <Card />
-                    </div>
-                    <div className="col">
-                        <Card />
-                    </div>
-                    <div className="col">
-                        <Card />
-                    </div>
-                    <div className="col">
-                        <Card />
-                    </div>
-                </div>
+                <Carousel />
+                <CardList />
             </div>
            
         </div>
