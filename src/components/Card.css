@@ -8,7 +8,7 @@
 .card-img-wrapper {
     display: block;      /* KLJUČNO: Omogućava da link poštuje širinu, visinu i overflow */
     width: 100%;
-    height: 180px;       /* Fiksiraj visinu slike po želji */
+    height: 140px;       /* Fiksiraj visinu slike po želji */
     overflow: hidden;    /* KLJUČNO: Sprečava da uvećana slika izađe van okvira */
     border-radius: 10px;
 }

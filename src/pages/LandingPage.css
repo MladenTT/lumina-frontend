@@ -221,8 +221,28 @@
 @media screen and (max-width: 768px) {
 
     .product-container {
-    display:flex;
-    flex-direction: column;
-}
-  
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box; /* Sprečava da padding širi element preko granica */
+        padding: 0 10px;        /* Bezbedna distanca od ivica ekrana mobilnog */
+    }
+
+    /* Sređujemo leve i desne kontejnere da ne probijaju širinu na malom ekranu */
+    .product-container-left, 
+    .product-container-right {
+        max-width: 100% !important;
+        margin: 10px 0 !important;   /* Uklanjamo bočne margine koje guraju van ekrana */
+        padding: 10px !important;     /* Smanjujemo unutrašnji padding za mobilne */
+        box-sizing: border-box;
+    }
+
+    /* Da glavno dugme za kupovinu i wishlist lepo stanu u red na mobilnom */
+    .dugme-kupovina-container {
+        width: 100%;
+    }
+
+    .btn-outline {
+        flex: 1; /* Dugme za korpu uzima raspoloživi prostor */
+    }
 }
