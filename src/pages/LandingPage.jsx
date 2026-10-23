@@ -2,7 +2,8 @@ import './LandingPage.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Shortcuts from '../components/Shortcuts';
-import Breadcrumb from '../components/Breadcrumb'
+import Breadcrumb from '../components/Breadcrumb';
+import Review from '../components/Review';
 
 const LandingPage = () => {
     return (
@@ -74,6 +75,58 @@ const LandingPage = () => {
                         </div>
                     </div>
                     
+                    <div className='product-info'>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Opis</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">O proizvodu</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Komentari</button>
+                            </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                            <div className="tab-pane show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabIndex="0">
+                                <p className="paragraf-tekst">
+                                    Ova raskošna mirisna sveća u <strong>velikoj staklenoj tegli</strong> unosi buđenje prirode i svežinu prolećnog jutra direktno u vaš prostor.
+                                </p>
+                                <p className="paragraf-tekst">
+                                    Inspirisana očaravajućim mirisom rascvetale mimoze, kombinuje prozračne cvetne note sa blagim, toplim tonovima koji ispunjavaju dom prijatnom i opuštajućom atmosferom. Zahvaljujući velikom pakovanju, pruža dugotrajno sagorevanje, dok elegantna tegla sa poklopcem lako se uklapa u svaki enterijer kao lep dekorativni detalj.
+                                </p>
+                            </div>
+                            <div class="tab-pane" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <th>Proizvodjac</th><td>Signature Yankee Candle - Velike</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Kategorija mirisa</th><td>Vocni mirisi</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Boja</th><td>Bez</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Vreme Gorenja</th><td>90 min</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Dimenzija</th><td>9.3 cm x 15.7cm</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Deklaracija</th><td>Proizvođač: VIRGINIA GIFT BRANDS, SAD Uvoznik: Live International d.o.o.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                                <div>
+                                    <Review />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                    
 

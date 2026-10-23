@@ -13,6 +13,9 @@ const Body = () => {
             <div className="Body-right">
                 <Carousel />
                 <CardList />
+                <div className="mobile-shortcuts">
+                    <Shortcuts />
+                </div>
             </div>
            
         </div>

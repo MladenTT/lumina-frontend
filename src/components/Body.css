@@ -27,6 +27,10 @@
     margin-bottom: 20px;;
 }
 
+.mobile-shortcuts {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
    
     .Body-left {
@@ -39,5 +43,9 @@
     .Body-container {
         padding-left: 0%;
         padding-right: 0%;
+    }
+
+    .mobile-shortcuts {
+        display:block;
     }
 }

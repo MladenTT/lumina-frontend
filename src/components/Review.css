@@ -1,0 +1,19 @@
+.review-container {
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.review-left {
+    flex: 0 0 150px;
+    text-align: center;
+}
+
+.review-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

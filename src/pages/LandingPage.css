@@ -1,7 +1,8 @@
 .LandingPage-container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    padding-bottom: 80px;
 }
 
 .titleLandingPage p {
@@ -217,6 +218,22 @@
     color: #ffffff;                    /* Srce unutra postaje belo */
 }
 
+/* Osigurava da sekcija sa tabovima i informacijama uvek ima dovoljno prostora iznad footera */
+.product-info {
+    width: 100%;
+    margin-bottom: 60px; /* Daje "luft" na dnu da sadržaj tabova ne dodiruje footer */
+}
+
+.product-info .tab-content {
+    padding: 1rem;
+}
+
+/* Sprečava da tab-pane sakrije tekst na malim ekranima */
+.tab-content, 
+.tab-pane {
+    height: auto !important;
+    overflow: visible !important;
+}
 
 @media screen and (max-width: 768px) {
 
