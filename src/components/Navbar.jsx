@@ -1,8 +1,12 @@
 import './Navbar.css'
 import TopBar from './TopBar.jsx'
 import logo from '../assets/logo2.png'
+import { useNavigate, useLocation } from 'react-router-dom'; // 1. Uvezen useLocation
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation(); // 2. Uzimamo trenutnu lokaciju (URL)
+
   return (
     <div>
         <TopBar />
@@ -10,7 +14,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg">
             <div className="container-fluid position-relative align-items-start">
                 
-                {/* 1. Leva strana: Hamburger dugme */}
+                {/* Leva strana: Hamburger dugme */}
                 <div className="d-flex align-items-center" style={{ minWidth: '40px', marginTop: '12px' }}>
                     <button 
                         className="navbar-toggler me-2" 
@@ -25,12 +29,17 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                {/* 2. Sredina: Logo centriran */}
-                <a className="navbar-brand position-absolute start-50 translate-middle-x m-0 top-0" href="#">
+                {/* Sredina: Logo koji vodi na početnu */}
+                <a 
+                    className="navbar-brand position-absolute start-50 translate-middle-x m-0 top-0" 
+                    href="#" 
+                    onClick={(e) => { e.preventDefault(); navigate('/'); }}
+                    style={{ cursor: 'pointer' }}
+                >
                     <img src={logo} alt="Logo" style={{ height: '60px' }} />
                 </a>
                 
-                {/* 3. Desna strana: Korpa (dodat order-lg-last da na velikom ekranu bude skroz desno) */}
+                {/* Desna strana: Korpa */}
                 <div className="cart-SVG ms-auto order-lg-last">
                     <button type="button" className="btn position-relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" className="bi bi-cart2" viewBox="0 0 16 16">
@@ -43,14 +52,30 @@ const Navbar = () => {
                     </button> 
                 </div>
 
-                {/* 4. Meni i pretraga (padajući sadržaj) */}
+                {/* Meni i pretraga */}
                 <div className="collapse navbar-collapse w-100 mt-2" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            {/* Dinamički dodeljujemo 'active' ako je putanja tačno '/' */}
+                            <a 
+                                className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} 
+                                aria-current={location.pathname === '/' ? 'page' : undefined}
+                                href="#" 
+                                onClick={(e) => { e.preventDefault(); navigate('/'); }}
+                            >
+                                Home
+                            </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Link</a>
+                            {/* Dinamički dodeljujemo 'active' ako je putanja '/kontakt' */}
+                            <a 
+                                className={`nav-link ${location.pathname === '/kontakt' ? 'active' : ''}`} 
+                                aria-current={location.pathname === '/kontakt' ? 'page' : undefined}
+                                href="#" 
+                                onClick={(e) => { e.preventDefault(); navigate('/kontakt'); }}
+                            >
+                                Kontakt
+                            </a>
                         </li>
                         <li className="nav-item dropdown">
                             <a 

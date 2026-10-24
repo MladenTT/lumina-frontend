@@ -60,7 +60,7 @@ const LandingPage = () => {
                                 </div>
                             </div>
                             <div className='dugme-kupovina-container'>
-                                <button type="button" class="btn-outline theme-success">
+                                <button type="button" className="btn-outline theme-success">
                                     <span className='tekst-dugme'>Dodaj u korpu</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-basket2-fill cart-icon" viewBox="0 0 16 16">
                                         <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
@@ -76,18 +76,18 @@ const LandingPage = () => {
                     </div>
                     
                     <div className='product-info'>
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Opis</button>
+                        <ul className="nav nav-tabs" id="myTab" role="tablist">
+                            <li className="nav-item" role="presentation">
+                                <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Opis</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">O proizvodu</button>
+                            <li className="nav-item" role="presentation">
+                                <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">O proizvodu</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Komentari</button>
+                            <li className="nav-item" role="presentation">
+                                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Komentari</button>
                             </li>
                             </ul>
-                            <div class="tab-content" id="myTabContent">
+                            <div className="tab-content" id="myTabContent">
                             <div className="tab-pane show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabIndex="0">
                                 <p className="paragraf-tekst">
                                     Ova raskošna mirisna sveća u <strong>velikoj staklenoj tegli</strong> unosi buđenje prirode i svežinu prolećnog jutra direktno u vaš prostor.
@@ -96,8 +96,8 @@ const LandingPage = () => {
                                     Inspirisana očaravajućim mirisom rascvetale mimoze, kombinuje prozračne cvetne note sa blagim, toplim tonovima koji ispunjavaju dom prijatnom i opuštajućom atmosferom. Zahvaljujući velikom pakovanju, pruža dugotrajno sagorevanje, dok elegantna tegla sa poklopcem lako se uklapa u svaki enterijer kao lep dekorativni detalj.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                                <table class="table table-striped">
+                            <div className="tab-pane" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabIndex="0">
+                                <table className="table table-striped">
                                     <tbody>
                                         <tr>
                                             <th>Proizvodjac</th><td>Signature Yankee Candle - Velike</td>
@@ -120,7 +120,7 @@ const LandingPage = () => {
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="tab-pane" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                            <div className="tab-pane" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabIndex="0">
                                 <div>
                                     <Review />
                                 </div>
