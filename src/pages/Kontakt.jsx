@@ -2,6 +2,7 @@ import './Kontakt.css'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Map from '../components/Map'
+import Breadcrumb from '../components/Breadcrumb'
 
 const Kontakt = () => {
     return (
@@ -9,12 +10,13 @@ const Kontakt = () => {
             <Navbar />
 
             {/* Kontejner sa klasama container i row za Bootstrap grid sistem */}
-            <div className="container my-4">
-                <div className="row">
+            <div className="container my-4 pb-5">
+                <Breadcrumb />
+                <div className="row  pt-5">
                     
                     {/* Leva strana zauzima 4 od 12 kolona na srednjim i velikim ekranima, a na malim ceo red (12) */}
-                    <div className="col-md-4 mb-4 mb-md-0">
-                        <h2>Kontakt</h2>
+                    <div className="col-md-4 mb-4 mb-md-0 infoContainer">
+                        <h2><strong>Kontakt</strong></h2>
                         <p><strong>Naziv firme:</strong> Lumina doo</p>
                         <p><strong>Telefon:</strong> +381(0)22 555-555</p>
                         <p><strong>E-mail:</strong> info@lumina.rs</p>

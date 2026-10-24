@@ -77,25 +77,27 @@ const Navbar = () => {
                                 Kontakt
                             </a>
                         </li>
-                        <li className="nav-item dropdown">
+                        <li className="nav-item">
+                            {/* Dinamički dodeljujemo 'active' ako je putanja '/kontakt' */}
                             <a 
-                                className="nav-link dropdown-toggle" 
+                                className={`nav-link ${location.pathname === '/o-nama' ? 'active' : ''}`} 
+                                aria-current={location.pathname === '/0-nama' ? 'page' : undefined}
                                 href="#" 
-                                role="button" 
-                                data-bs-toggle="dropdown" 
-                                aria-expanded="false"
+                                onClick={(e) => { e.preventDefault(); navigate('/o-nama'); }}
                             >
-                                Dropdown
+                                O nama
                             </a>
-                            <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Another action</a></li>
-                                <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+                            {/* Dinamički dodeljujemo 'active' ako je putanja '/kontakt' */}
+                            <a 
+                                className={`nav-link ${location.pathname === '/kontakt' ? 'active' : ''}`} 
+                                aria-current={location.pathname === '/kontakt' ? 'page' : undefined}
+                                href="#" 
+                                onClick={(e) => { e.preventDefault(); navigate('/kontakt'); }}
+                            >
+                                Kontakt
+                            </a>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">

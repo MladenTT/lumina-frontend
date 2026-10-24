@@ -7,6 +7,8 @@
     width: 100%;
     padding-left: 20%;
     padding-right: 20%;
+    padding-top: 3px;
+    padding-bottom: 3px;
     display: flex;
     justify-content: space-between; /* Razdvaja levo i desno na krajeve */
     align-items: center;
@@ -34,7 +36,8 @@
 }
 
 .TopBar-right a {
-    margin: 10px;
+    display: inline-block;
+    transition: none; /* Da nema naglih prelaza */
 }
 
 .TopBar-right a,
@@ -45,7 +48,8 @@
 
 .TopBar-right a:hover,
 .TopBar-left a:hover {
-    font-weight:bold;
+    font-weight: normal; /* Vraćamo font na normalno da se ne širi */
+    text-shadow: 0 0 0.9px currentColor; /* Imitira bold efekat bez promene širine */
 }
 @media screen and (max-width: 768px) {
     .TopBar-container {

@@ -1,20 +1,15 @@
-.body-container {
-    display: flex;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 20px;
+.infoContainer h2 {
+    color: #696666;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.infoContainer p {
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .body-left {
     display: flex;
     flex-direction: column;
     padding: 20px;
-}
-
-.body-right {
-
-}
-
-.body-mid {
-    
 }
